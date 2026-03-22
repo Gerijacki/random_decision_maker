@@ -25,7 +25,7 @@ sourcecode:
     origin: https://github.com/Gerijacki/random_decision_maker.git
     # Replace with the exact commit SHA after pushing to GitHub.
     # Run `git rev-parse HEAD` in the repo to get it.
-    commit_sha: REPLACE_WITH_COMMIT_SHA
+    commit_sha: 863fa52550bd798c13a145c9b0efd9f52eb2fabe
 
 # One-line description (plain text).
 # Already in application.fam as fap_description — but you must set it here too
