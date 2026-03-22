@@ -1,0 +1,45 @@
+
+# ─────────────────────────────────────────────────────────────────────────────
+# application.fam — Flipper Application Manifest
+#
+# This file is read by the fbt (Flipper Build Tool) to register the app.
+# It controls the app ID, display name, entry-point symbol, icon, category and
+# stack size.  All values follow the Flipper Application Catalog conventions.
+# ─────────────────────────────────────────────────────────────────────────────
+
+App(
+    # Unique identifier used by the firmware and the App Catalog.
+    # Must contain only lowercase letters, digits and underscores.
+    appid = "random_decision_maker",
+
+    # Human-readable name shown in the Flipper menu.
+    name = "Decision Maker",
+
+    # This is an external .fap — it is NOT compiled into the firmware image.
+    apptype = FlipperAppType.EXTERNAL,
+
+    # The C function that acts as the entry-point (must match the definition
+    # in the .c file exactly).
+    entry_point = "random_decision_maker_app",
+
+    # System services this app depends on.
+    requires = ["gui"],
+
+    # Stack size in bytes.  2 KiB for ViewDispatcher + TextInput + model storage.
+    stack_size = 2 * 1024,
+
+    # Place the app in the "Games" folder on the Flipper.
+    fap_category = "Games",
+
+    # Short description shown in the App Catalog.
+    fap_description = "Spin a roulette to pick a random option for you.",
+
+    # App version string.
+    fap_version = "1.0",
+
+    # Author shown in the App Catalog.
+    fap_author = "jacki",
+
+    # 10×10 px 1-bit PNG icon shown in the Flipper menu and the App Catalog.
+    fap_icon = "icon.png",
+)

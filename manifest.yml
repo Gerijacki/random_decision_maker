@@ -1,0 +1,47 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# manifest.yml — Flipper Application Catalog manifest
+#
+# HOW TO USE THIS FILE
+# ────────────────────
+# 1. Push this whole folder to a PUBLIC GitHub repository.
+# 2. Copy the exact commit SHA of that push and paste it into `commit_sha`.
+#    (run: git rev-parse HEAD)
+# 3. Take at least one screenshot with qFlipper → save in screenshots/
+# 4. Fork https://github.com/flipperdevices/flipper-application-catalog
+# 5. Add this file to:
+#      applications/Games/random_decision_maker/manifest.yml
+# 6. Open a Pull Request.  Branch name convention:
+#      <your-github-username>/random_decision_maker_1.0
+#
+# Fields that are already defined in application.fam (name, appid, fap_version,
+# fap_category, fap_author, fap_icon, fap_description) are picked up
+# automatically by the bundler — no need to repeat them here.
+# ─────────────────────────────────────────────────────────────────────────────
+
+sourcecode:
+  type: git
+  location:
+    # Replace with your actual GitHub repository URL.
+    origin: https://github.com/Gerijacki/random_decision_maker.git
+    # Replace with the exact commit SHA after pushing to GitHub.
+    # Run `git rev-parse HEAD` in the repo to get it.
+    commit_sha: REPLACE_WITH_COMMIT_SHA
+
+# One-line description (plain text).
+# Already in application.fam as fap_description — but you must set it here too
+# for the catalog bundler.
+short_description: Spin a roulette to pick a random option for you.
+
+# Full description — loads the README.md from the repo root.
+description: "@README.md"
+
+# Changelog — loads changelog.md from the repo root.
+changelog: "@changelog.md"
+
+# At least one screenshot is required.
+# Take screenshots with qFlipper (File Manager → Screenshot).
+# Do NOT change their resolution or format after saving.
+screenshots:
+  - screenshots/menu.png
+  - screenshots/spinning.png
+  - screenshots/result.png
