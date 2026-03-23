@@ -13,7 +13,7 @@ A [Flipper Zero](https://flipperzero.one/) app that lets you type your own choic
 - **Roulette-style animation** with a fast phase that decelerates smoothly before landing
 - **True randomness** via `furi_hal_random_get()` (hardware RNG, not a software PRNG)
 - Scrollable decision list with context-sensitive on-screen hints
-- Spin again or return to the list from the result screen
+- Spin again or return to the list from the result screen 
 
 ## Screenshots
 
